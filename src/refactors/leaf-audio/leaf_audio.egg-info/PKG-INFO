@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: leaf-audio
+Version: 0.1.0
+Summary: LEAF: a Learnable Audio Frontend.
+Home-page: https://github.com/google-research/leaf-audio
+Author: Google LLC
+Author-email: opensource@google.com
+License: Apache 2.0
+Description: LEAF: a Learnable Audio Frontend.
+Keywords: learnable frontend audio
+Platform: UNKNOWN

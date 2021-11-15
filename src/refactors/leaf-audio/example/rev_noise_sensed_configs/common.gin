@@ -1,0 +1,131 @@
+# -*-Python-*-
+
+import example.external_configurables
+import leaf_audio.frontend
+import leaf_audio.models
+import leaf_audio.pooling
+import leaf_audio.postprocessing
+
+# HYPERPARAMETERS
+# FULL TRAIN
+# TODO CHECK - HATEFUL ABS PATHS
+train.workdir = '/nas/home/gantonacci/Thesis/Project/pythonProject/datasets/nn/checkpoints/main_wn_sensed_leaf_trial/'
+# TODO CHECK CORRECT REGISTRATION OF leaf-audio/example.main
+train.dataset = 'rev_noises_sensed_o10_ray_leaf_trial'
+train.num_epochs = 1000       #
+train.learning_rate = 1e-4
+train.batch_size = 64
+
+# BAND TEST over FULL TRAIN
+# TODO CHECK - HATEFUL ABS PATHS
+test.workdir = '/nas/home/gantonacci/Thesis/Project/pythonProject/datasets/nn/checkpoints/main_wn_sensed_leaf_trial/'
+# TODO CHECK CORRECT REGISTRATION OF leaf-audio/example.main
+test.dataset = 'rev_noises_sensed_o10_ray_leaf_trial'
+test.learning_rate = 1e-4
+test.batch_size = 64
+
+# PER BAND TRAIN
+# TODO CHECK - HATEFUL ABS PATHS
+train_x_bands.workdir = '/nas/home/gantonacci/Thesis/Project/pythonProject/datasets/nn/checkpoints/main_wn_sensed_leaf_trial/'
+# TODO CHECK CORRECT REGISTRATION OF leaf-audio/example.main
+train_x_bands.dataset = 'rev_noises_sensed_o10_ray_leaf_trial'
+train_x_bands.num_epochs = 1000       #
+train_x_bands.learning_rate = 1e-4
+train_x_bands.batch_size = 32
+
+train_x_bands.vol_start = 50
+train_x_bands.vol_end = 1050
+train_x_bands.vol_num_output_ranges = 3
+train_x_bands.t60_start = 0.5
+train_x_bands.t60_end = 2.5
+train_x_bands.t60_num_output_ranges = 3
+
+# BAND TEST over BAND TRAIN
+# TODO CHECK - HATEFUL ABS PATHS
+test_x_bands.workdir = '/nas/home/gantonacci/Thesis/Project/pythonProject/datasets/nn/checkpoints/main_wn_sensed_leaf_trial/'
+# TODO CHECK CORRECT REGISTRATION OF leaf-audio/example.main
+test_x_bands.dataset = 'rev_noises_sensed_o10_ray_leaf_trial'
+test_x_bands.learning_rate = 1e-4
+test_x_bands.batch_size = 32
+
+test_x_bands.vol_start = 50
+test_x_bands.vol_end = 1050
+test_x_bands.vol_num_output_ranges = 3
+test_x_bands.t60_start = 0.5
+test_x_bands.t60_end = 2.5
+test_x_bands.t60_num_output_ranges = 3
+
+###########################
+
+# PER CLASS TRAIN FOR VOL REG
+# TODO CHECK - HATEFUL ABS PATHS
+train_vol_reg_per_class.workdir = '/nas/home/gantonacci/Thesis/Project/pythonProject/datasets/nn/checkpoints/main_wn_sensed_leaf_trial/'
+# TODO CHECK CORRECT REGISTRATION OF leaf-audio/example.main
+train_vol_reg_per_class.dataset = 'rev_noises_sensed_o10_ray_leaf_trial'
+train_vol_reg_per_class.num_epochs = 1000       #
+train_vol_reg_per_class.learning_rate = 1e-4
+train_vol_reg_per_class.batch_size = 64
+
+# PER CLASS TRAIN FOR T60 REG
+# TODO CHECK - HATEFUL ABS PATHS
+train_t60_reg_per_class.workdir = '/nas/home/gantonacci/Thesis/Project/pythonProject/datasets/nn/checkpoints/main_wn_sensed_leaf_trial/'
+# TODO CHECK CORRECT REGISTRATION OF leaf-audio/example.main
+train_t60_reg_per_class.dataset = 'rev_noises_sensed_o10_ray_leaf_trial'
+train_t60_reg_per_class.num_epochs = 1000       #
+train_t60_reg_per_class.learning_rate = 1e-11
+train_t60_reg_per_class.batch_size = 64
+
+# PER CLASS TEST FOR VOL REG
+# TODO CHECK - HATEFUL ABS PATHS
+test_vol_reg_per_class.workdir = '/nas/home/gantonacci/Thesis/Project/pythonProject/datasets/nn/checkpoints/main_wn_sensed_leaf_trial/'
+# TODO CHECK CORRECT REGISTRATION OF leaf-audio/example.main
+test_vol_reg_per_class.dataset = 'rev_noises_sensed_o10_ray_leaf_trial'
+test_vol_reg_per_class.learning_rate = 1e-4
+test_vol_reg_per_class.batch_size = 64
+
+# PER BAND TRAIN FOR VOL REG
+# TODO CHECK - HATEFUL ABS PATHS
+train_vol_reg_x_bands.workdir = '/nas/home/gantonacci/Thesis/Project/pythonProject/datasets/nn/checkpoints/main_wn_sensed_leaf_trial/'
+# TODO CHECK CORRECT REGISTRATION OF leaf-audio/example.main
+train_vol_reg_x_bands.dataset = 'rev_noises_sensed_o10_ray_leaf_trial'
+train_vol_reg_x_bands.num_epochs = 1000       #
+train_vol_reg_x_bands.learning_rate = 1e-4
+train_vol_reg_x_bands.batch_size = 32
+
+train_vol_reg_x_bands.vol_start = 50
+train_vol_reg_x_bands.vol_end = 1050
+train_vol_reg_x_bands.vol_num_output_ranges = 3
+train_vol_reg_x_bands.t60_start = 0.5
+train_vol_reg_x_bands.t60_end = 2.5
+train_vol_reg_x_bands.t60_num_output_ranges = 3
+
+# PER BAND TEST FOR VOL REG
+# TODO CHECK - HATEFUL ABS PATHS
+test_vol_reg_x_bands.workdir = '/nas/home/gantonacci/Thesis/Project/pythonProject/datasets/nn/checkpoints/main_wn_sensed_leaf_trial/'
+# TODO CHECK CORRECT REGISTRATION OF leaf-audio/example.main
+test_vol_reg_x_bands.dataset = 'rev_noises_sensed_o10_ray_leaf_trial'
+test_vol_reg_x_bands.learning_rate = 1e-4
+test_vol_reg_x_bands.batch_size = 32
+
+test_vol_reg_x_bands.vol_start = 50
+test_vol_reg_x_bands.vol_end = 1050
+test_vol_reg_x_bands.vol_num_output_ranges = 3
+test_vol_reg_x_bands.t60_start = 0.5
+test_vol_reg_x_bands.t60_end = 2.5
+test_vol_reg_x_bands.t60_num_output_ranges = 3
+
+###########################
+
+# AUDIO PRE-PROCESSING
+data.prepare.transform_fns = [@data.align, @data.loudness_normalization]
+loudness_normalization.target_db = 15.0
+loudness_normalization.max_gain_db = 30.0
+align.seq_len = 16000
+
+# PICK YOUR ENCODER
+AudioClassifier.encoder = @ConvNet()
+
+# ENCODER PARAMETERS
+ConvNet.filters = [64, 128, 256, 256, 512, 512]
+ConvBlock.activation = 'relu'
+ConvBlock.dropout = 0.1

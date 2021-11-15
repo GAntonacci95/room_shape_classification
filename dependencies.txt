@@ -1,0 +1,16 @@
+
+# without base_environment_gpu.yml
+
+conda install numpy matplotlib pydot graphviz scipy pandas obspy numba librosa
+conda install tensorflow-gpu keras wandb
+
+pip install git+https://github.com/detly/gammatone.git pyroomacoustics acoustics
+
+
+git clone https://github.com/google-research/leaf-audio.git e seguire istruzioni setup
+# si crei un nuovo environment dove installarlo che estenda base
+conda create --name base_n_leaf --clone base
+conda deactivate
+conda activate base_n_leaf
+# dal direttorio leaf-audio:
+pip install -e .

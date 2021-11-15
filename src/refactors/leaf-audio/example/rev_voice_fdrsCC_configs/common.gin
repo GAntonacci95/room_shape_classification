@@ -1,0 +1,30 @@
+# -*-Python-*-
+
+import example.external_configurables
+import leaf_audio.frontend
+import leaf_audio.models
+import leaf_audio.pooling
+import leaf_audio.postprocessing
+
+# HYPERPARAMETERS
+# TODO CHECK - HATEFUL ABS PATHS
+train.workdir = '/nas/home/gantonacci/Thesis/Project/pythonProject/datasets/nn/checkpoints/main_vc_fdrsCC_leaf_trial/'
+# TODO CHECK CORRECT REGISTRATION OF leaf-audio/example.main
+train.dataset = 'rev_voices_fdrscc_leaf_trial'
+train.num_epochs = 50       #
+train.learning_rate = 1e-4
+train.batch_size = 64
+
+# AUDIO PRE-PROCESSING
+data.prepare.transform_fns = [@data.align, @data.loudness_normalization]
+loudness_normalization.target_db = 15.0
+loudness_normalization.max_gain_db = 30.0
+align.seq_len = 16000
+
+# PICK YOUR ENCODER
+AudioClassifier.encoder = @ConvNet()
+
+# ENCODER PARAMETERS
+ConvNet.filters = [64, 128, 256, 256, 512, 512]
+ConvBlock.activation = 'relu'
+ConvBlock.dropout = 0.1
