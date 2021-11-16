@@ -1,0 +1,15 @@
+src/__pycache__
+
+datasets/nn/checkpoints/*
+datasets/nn/features/pre_processing/*
+datasets/nn/features/processing/*
+datasets/nn/features/post_processing/*
+datasets/nn/final_datasets/*
+
+datasets/rooms/!report
+datasets/rooms/setups/*report*
+datasets/rooms/setups/rirs/*
+datasets/rooms/setups/acquisitions/*
+datasets/rooms/setups/noise_acquisitions/*
+datasets/rooms/setups/voice_acquisitions/*
+datasets/rooms_rlh/*
