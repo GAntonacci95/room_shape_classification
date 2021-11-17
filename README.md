@@ -33,12 +33,12 @@ We provided a room shape classification system based on a mono speech signal. Su
 We discovered the relevance of the initial part of the reverberation tail within the classification task.
 
 <div align="center">
-    <img src="images/results_spread.png" alt="results_spread" width="300">
+    <img src="images/results_spread.png" alt="results_spread" height="300">
 </div>
 
 <div align="center">
-    <img src="images/results_acc1.png" alt="results_acc1" width="300">
-    <img src="images/results_acc2.png" alt="results_acc2" width="300">
+    <img src="images/results_conf1.png" alt="results_conf1" height="300">
+    <img src="images/results_conf2.png" alt="results_conf2" height="300">
 </div>
 
 What is more, we demonstrated a direct relation of volume regression spread and shape classification accuracy.
