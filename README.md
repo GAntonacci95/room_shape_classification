@@ -1,6 +1,14 @@
 # A model selection method for room shape classification based on mono speech signals
 
-## Entry-point files
+## Introduction to the problem
+
+blabla
+
+## Method
 
 - `./src/main.py`;
 - `./src/refactors/leaf-audio/example/main.py`.
+
+## Results
+
+blabla
