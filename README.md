@@ -15,7 +15,7 @@ This study aims at widening the set of possible room parameters which can be con
 
 The proposed methodology fixes some volume and reverberation time bands to enhance the performances of the shape classifiers and to establish a relationship among volume and geometry estimation performances.
 
-![method](images/method.png)
+<img src="images/method.png" alt="method">
 
 To do so, either a preliminary volume or a reverberation time estimation is performed to retrieve a band index estimate.
 
@@ -32,10 +32,13 @@ We provided a room shape classification system based on a mono speech signal. Su
 
 We discovered the relevance of the initial part of the reverberation tail within the classification task.
 
-![results-spread](images/results-spread.png =480x480)
+<div align="center">
+    <img src="images/results_spread.png" alt="results_spread" width="480" height="480">
+</div>
 
 <div align="center">
-    ![results-acc1](images/results-acc1.png =480x480) ![results-acc2](images/results-acc2.png =480x480)
+    <img src="images/results_acc1.png" alt="results_acc1" width="480" height="480">
+    <img src="images/results_acc2.png" alt="results_acc2" width="480" height="480">
 </div>
 
 What is more, we demonstrated a direct relation of volume regression spread and shape classification accuracy.
